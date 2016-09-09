@@ -1,0 +1,38 @@
+<md-sidenav-layout fullscreen>
+  <md-toolbar color="primary">
+
+    <button md-icon-button (click)="start.toggle()">
+      <md-icon class="md-24">menu</md-icon>
+    </button>
+
+    <span>Hogular | Absence makes lemonade</span>
+
+  </md-toolbar>
+
+  <md-sidenav #start (open)="mybutton.focus()">
+    <md-toolbar color="primary">
+      <span>Angular Material</span>
+    </md-toolbar>
+
+    <md-nav-list>
+
+      <md-list-item>
+        <button md-icon-button>
+          <md-icon>home</md-icon>
+        </button>
+        <a [routerLink]="['/']" class="sidenav-link">Home</a>
+      </md-list-item>
+
+      <md-list-item>
+        <button md-icon-button>
+          <md-icon>kitchen</md-icon>
+        </button>
+        <a [routerLink]="['/news']" class="sidenav-link">News</a>
+      </md-list-item>
+    </md-nav-list>
+    <span md-button #mybutton (click)="start.close()"></span>
+
+  </md-sidenav>
+  <router-outlet></router-outlet>
+</md-sidenav-layout>
+

@@ -1,0 +1,16 @@
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+md-sidenav-layout {
+  background-color: #f2f2f2;
+}
+
+md-sidenav {
+  width: 250px;
+}
+
+.sidenav-link {
+  margin-left: 10px;
+}
+
